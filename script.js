@@ -1,3 +1,5 @@
+// REVEAL ANIMATION
+
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -8,10 +10,10 @@ window.addEventListener("scroll", () => {
 
     const revealTop = element.getBoundingClientRect().top;
 
-    const revealPoint = 100;
+    if (revealTop < windowHeight - 100) {
 
-    if(revealTop < windowHeight - revealPoint){
       element.classList.add("active");
+
     }
 
   });
